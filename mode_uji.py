@@ -17,6 +17,7 @@ import numpy as np
 from audio import FINGER_NAMES, TonePlayer
 from calibration import Calibrator
 from hand_features import HandTracker
+from hud import draw_hud
 from temporal import TemporalFilter
 
 REPEATS = 20            # percobaan per jari
@@ -28,11 +29,6 @@ OUT_DIR = "hasil_uji"
 HEADER = ["relawan", "trial", "jari_target", "jari_terdeteksi", "benar",
           "jumlah_pemicu", "waktu_respon_s", "fps"]
 # Kode jari: 0 jempol, 1 telunjuk, 2 tengah, 3 manis, 4 kelingking, -1 tidak terdeteksi
-
-
-def put_text(frame, text, y, color=(255, 255, 255), scale=0.8):
-    cv2.putText(frame, text, (10, y), cv2.FONT_HERSHEY_SIMPLEX, scale, (0, 0, 0), 4, cv2.LINE_AA)
-    cv2.putText(frame, text, (10, y), cv2.FONT_HERSHEY_SIMPLEX, scale, color, 2, cv2.LINE_AA)
 
 
 def main():
@@ -127,8 +123,7 @@ def main():
             if state == "done":
                 message = "Selesai. Terima kasih! Tekan Q."
 
-            put_text(frame, message, 40, (0, 255, 255))
-            put_text(frame, f"FPS: {fps:.0f}", 80, scale=0.6)
+            draw_hud(frame, [(message, (0, 255, 255)), (f"FPS: {fps:.0f}", (255, 255, 255))])
             cv2.imshow("Mode Uji", frame)
             key = cv2.waitKey(1) & 0xFF
             if key == ord("q"):
