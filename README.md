@@ -154,4 +154,4 @@ Tidak memakai dataset publik. Data uji berupa log numerik sesi relawan sehat
 
 ## Tautan tambahan
 
-- Video demo : 
+- Video demo : https://drive.google.com/file/d/1dIPoKGuPg26vstayXBdThNbyZVB3hFUe/view?usp=sharing
