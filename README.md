@@ -17,7 +17,8 @@ Sistem ini alat bantu latihan, bukan alat medis. Tidak ada video yang disimpan.
 4. Jalankan aplikasi: `python main.py`
 
 Tombol di aplikasi: `C` kalibrasi (buka-tutup tangan selama 8 detik), `M` mode melodi,
-`+` / `-` volume, `Q` keluar dan simpan ringkasan sesi ke `hasil_sesi/ringkasan_sesi.csv`.
+`D` ganti level melodi (Mudah/Sedang/Sulit), `+` / `-` volume, `Q` keluar. Setelah `Q`,
+ringkasan sesi tampil di layar dan disimpan ke `hasil_sesi/ringkasan_sesi.csv`.
 
 ## Pengujian dan evaluasi
 
