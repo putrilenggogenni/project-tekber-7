@@ -1,4 +1,4 @@
-"""Pembuat dan pemutar nada. Penanggung jawab: Anggota 3."""
+"""Pembuat dan pemutar nada."""
 
 import numpy as np
 import pygame

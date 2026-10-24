@@ -1,4 +1,4 @@
-"""Kalibrasi per pengguna. Penanggung jawab: Anggota 2.
+"""Kalibrasi per pengguna.
 
 Pengguna membuka dan menutup tangan berulang kali. Untuk tiap jari dicatat
 nilai terendah (tertekuk) dan tertinggi (terbuka) memakai persentil agar

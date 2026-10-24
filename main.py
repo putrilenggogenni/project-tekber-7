@@ -166,7 +166,7 @@ def show_summary(stats, saved_path):
 
 
 def main():
-    tracker = HandTracker()
+    tracker = HandTracker(camera_index=0)
     player = TonePlayer()
     calibrator = Calibrator()
     temporal = TemporalFilter()

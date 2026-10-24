@@ -1,4 +1,4 @@
-"""Mode uji untuk mengumpulkan data evaluasi. Penanggung jawab: Anggota 4.
+"""Mode uji untuk mengumpulkan data evaluasi..
 
 Aplikasi meminta relawan menggerakkan jari tertentu (urutan acak). Setiap percobaan
 dicatat ke CSV: jari target, jari yang memicu nada, jumlah pemicu, waktu respon, FPS.

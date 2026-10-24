@@ -1,4 +1,4 @@
-"""Deteksi tangan dan fitur tekukan jari. Penanggung jawab: Anggota 1.
+"""Deteksi tangan dan fitur tekukan jari.
 
 Fitur per jari = jarak ujung jari ke pergelangan dibagi ukuran telapak
 (jarak pergelangan ke pangkal jari tengah). Nilai BESAR = jari lurus/terbuka,
@@ -38,7 +38,7 @@ def compute_features(hand_landmarks, width, height):
 
 class HandTracker:
     def __init__(self, camera_index=0, det_conf=0.6, track_conf=0.6):
-        self.cap = cv2.VideoCapture(camera_index)
+        self.cap = cv2.VideoCapture(camera_index, cv2.CAP_DSHOW)
         self._hands_mod = mp.solutions.hands
         self._drawer = mp.solutions.drawing_utils
         self.hands = self._hands_mod.Hands(

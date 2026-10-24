@@ -1,0 +1,10 @@
+jari,precision,recall
+Jempol,0.633,0.95
+Telunjuk,0.889,0.8
+Tengah,1.0,0.85
+Manis,1.0,0.75
+Kelingking,1.0,0.8
+
+akurasi_persen,83.0
+nada_keliru_per_sesi,37.0
+fps_rata2,32.9

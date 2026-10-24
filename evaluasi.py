@@ -1,4 +1,4 @@
-"""Evaluasi sistem dari data uji. Penanggung jawab: Anggota 4.
+"""Evaluasi sistem dari data uji.
 
 Membaca semua file hasil_uji/uji_*.csv lalu menghitung:
 confusion matrix per jari, precision, recall, akurasi, nada keliru per sesi,
