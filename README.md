@@ -52,6 +52,7 @@ di komputer masing-masing dengan langkah di atas.
 ## Cara memakai aplikasi (`main.py`)
 
 1. Saat aplikasi terbuka, tekan `C`. Kalibrasi berjalan dua fase:
+
    - Fase 1 (4 detik): istirahatkan tangan dan jangan digerakkan.
    - Fase 2 (8 detik): gerakkan jari semampunya (buka-tutup).
 
@@ -63,27 +64,27 @@ di komputer masing-masing dengan langkah di atas.
 3. Tekan `M` untuk mode melodi, `D` untuk mengganti level, `H` untuk tugas seluruh tangan.
 4. Tekan `Q` untuk keluar. Ringkasan sesi tampil dan disimpan.
 
-| Tombol | Fungsi |
-|---|---|
-| `C` | Kalibrasi dua fase (istirahat 4 detik, gerak 8 detik) |
-| `B` | Ganti arah latihan TUTUP/BUKA (setelah kalibrasi, jika arah lain tersedia) |
-| `H` | Tugas seluruh tangan hidup/mati (setelah kalibrasi) |
-| `M` | Mode melodi hidup/mati (setelah kalibrasi) |
-| `D` | Ganti level melodi (setelah kalibrasi) |
-| `T` | Melodi ketat/toleran |
-| `A` | Tandai sesi DIBANTU/MANDIRI |
-| `P` | Jeda/lanjut (setelah kalibrasi) |
-| `[` / `]` | Sensitivitas lebih mudah / lebih sulit memicu (rentang 0,30 sampai 0,80) |
-| `+` atau `=` / `-` | Volume naik / turun |
-| `Q` | Keluar, simpan, dan tampilkan ringkasan sesi |
+| Tombol                   | Fungsi                                                                     |
+| ------------------------ | -------------------------------------------------------------------------- |
+| `C`                    | Kalibrasi dua fase (istirahat 4 detik, gerak 8 detik)                      |
+| `B`                    | Ganti arah latihan TUTUP/BUKA (setelah kalibrasi, jika arah lain tersedia) |
+| `H`                    | Tugas seluruh tangan hidup/mati (setelah kalibrasi)                        |
+| `M`                    | Mode melodi hidup/mati (setelah kalibrasi)                                 |
+| `D`                    | Ganti level melodi (setelah kalibrasi)                                     |
+| `T`                    | Melodi ketat/toleran                                                       |
+| `A`                    | Tandai sesi DIBANTU/MANDIRI                                                |
+| `P`                    | Jeda/lanjut (setelah kalibrasi)                                            |
+| `[` / `]`            | Sensitivitas lebih mudah / lebih sulit memicu (rentang 0,30 sampai 0,80)   |
+| `+` atau `=` / `-` | Volume naik / turun                                                        |
+| `Q`                    | Keluar, simpan, dan tampilkan ringkasan sesi                               |
 
 ### Mode melodi
 
-| Level | Jari dalam melodi | Batas waktu per nada |
-|---|---|---|
-| Mudah | 3 jari (jempol, telunjuk, tengah) | Tanpa batas |
-| Sedang | 5 jari | Tanpa batas |
-| Tantangan waktu | 5 jari | Adaptif |
+| Level           | Jari dalam melodi                 | Batas waktu per nada |
+| --------------- | --------------------------------- | -------------------- |
+| Mudah           | 3 jari (jempol, telunjuk, tengah) | Tanpa batas          |
+| Sedang          | 5 jari                            | Tanpa batas          |
+| Tantangan waktu | 5 jari                            | Adaptif              |
 
 Batas waktu adaptif adalah 3 kali median waktu benar terakhir, dibatasi 8 sampai 30 detik
 (awalnya 12 detik). Jari yang nonaktif dilewati dari melodi. Jika semua jari melodi
@@ -206,18 +207,18 @@ skenario `normal`) dari tiga relawan sehat (kode OR2, OR3, OR4), masing-masing 1
 
 ### Uji respons jari
 
-| Metrik | Hasil |
-|---|---|
-| Akurasi keseluruhan | 94,7% (284 dari 300 percobaan) |
-| Akurasi per relawan | OR2 94%, OR3 96%, OR4 94% |
-| Salah jari / terlewat | 12 / 4 |
-| Precision per jari | 0,92 (jempol), 0,93 (telunjuk), 0,97 (tengah), 0,98 (manis), 1,00 (kelingking) |
-| Recall per jari | 0,88 (manis), 0,95 (telunjuk, tengah, kelingking), 1,00 (jempol) |
-| Nada keliru per sesi | 8,67 (OR2 17, OR3 5, OR4 4) |
-| Rata-rata waktu respon | 1,48 detik (termasuk waktu reaksi relawan, bukan latensi sistem murni) |
-| Rata-rata FPS | 19,9 |
-| Persen frame tangan terdeteksi | 100% |
-| Indeks isolasi | 0,957 |
+| Metrik                         | Hasil                                                                          |
+| ------------------------------ | ------------------------------------------------------------------------------ |
+| Akurasi keseluruhan            | 94,7% (284 dari 300 percobaan)                                                 |
+| Akurasi per relawan            | OR2 94%, OR3 96%, OR4 94%                                                      |
+| Salah jari / terlewat          | 12 / 4                                                                         |
+| Precision per jari             | 0,92 (jempol), 0,93 (telunjuk), 0,97 (tengah), 0,98 (manis), 1,00 (kelingking) |
+| Recall per jari                | 0,88 (manis), 0,95 (telunjuk, tengah, kelingking), 1,00 (jempol)               |
+| Nada keliru per sesi           | 8,67 (OR2 17, OR3 5, OR4 4)                                                    |
+| Rata-rata waktu respon         | 1,48 detik (termasuk waktu reaksi relawan, bukan latensi sistem murni)         |
+| Rata-rata FPS                  | 19,9                                                                           |
+| Persen frame tangan terdeteksi | 100%                                                                           |
+| Indeks isolasi                 | 0,957                                                                          |
 
 Dari 12 percobaan salah jari, 5 terbaca sebagai jempol, 4 telunjuk, 2 tengah, dan 1 manis.
 
@@ -256,18 +257,18 @@ relawan ditambah.
 
 ## Struktur file dan penanggung jawab
 
-| File | Isi | Penanggung jawab |
-|---|---|---|
-| `hand_features.py` | Webcam, MediaPipe Hands, fitur tekukan jari (jarak dan sudut) | Mazaya |
-| `calibration.py` | Kalibrasi dua fase, usaha relatif, zona mati, validitas jari per arah | Eka |
-| `temporal.py` | Smoothing (moving average) dan hysteresis | Eka |
-| `audio.py` | Pembuatan dan pemutaran nada dan akord | Romanna |
-| `hud.py` | Teks dan tampilan informasi di layar | Romanna |
-| `main.py` | Aplikasi utama, tampilan, mode melodi, seluruh tangan, ringkasan sesi | Romanna |
-| `mode_uji.py` | Pengumpulan data uji respons jari dari relawan | Lenggo |
-| `evaluasi.py` | Confusion matrix, precision, recall, nada keliru, FPS, per kondisi uji | Lenggo |
-| `uji_deteksi_postur.py` | Cek deteksi postur dan pemisahan fitur |Lenggo |
-| `uji_diam.py` | Uji pemicu palsu pada kondisi diam | Lenggo |
+| File                      | Isi                                                                    | Penanggung jawab |
+| ------------------------- | ---------------------------------------------------------------------- | ---------------- |
+| `hand_features.py`      | Webcam, MediaPipe Hands, fitur tekukan jari (jarak dan sudut)          | Mazaya           |
+| `calibration.py`        | Kalibrasi dua fase, usaha relatif, zona mati, validitas jari per arah  | Eka              |
+| `temporal.py`           | Smoothing (moving average) dan hysteresis                              | Eka              |
+| `audio.py`              | Pembuatan dan pemutaran nada dan akord                                 | Romanna          |
+| `hud.py`                | Teks dan tampilan informasi di layar                                   | Romanna          |
+| `main.py`               | Aplikasi utama, tampilan, mode melodi, seluruh tangan, ringkasan sesi  | Romanna          |
+| `mode_uji.py`           | Pengumpulan data uji respons jari dari relawan                         | Lenggo           |
+| `evaluasi.py`           | Confusion matrix, precision, recall, nada keliru, FPS, per kondisi uji | Lenggo           |
+| `uji_deteksi_postur.py` | Cek deteksi postur dan pemisahan fitur                                 | Mazaya           |
+| `uji_diam.py`           | Uji pemicu palsu pada kondisi diam                                     | Mazaya           |
 
 ## Dataset
 
