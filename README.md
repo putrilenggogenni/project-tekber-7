@@ -197,37 +197,58 @@ Nada keliru per percobaan adalah `jumlah_pemicu` dikurangi pemicu yang benar, di
 per relawan lalu dirata-rata antar relawan. Rata-rata waktu respon hanya dihitung dari
 percobaan yang terdeteksi.
 
-## Hasil pengujian awal
+## Hasil pengujian
 
-Hasil dari satu relawan sehat (kode OR1, usia 20, tangan kanan), 100 percobaan. Data ini
-diambil dengan versi awal sebelum v3 (kalibrasi satu fase), tersimpan di `hasil_uji/uji_or1.csv`.
-Pengujian dengan kode v3 belum dilakukan, jadi angka di bawah belum tentu berlaku untuk v3.
+Data diambil dengan versi kode terbaru (kalibrasi dua fase, fitur `jarak`, arah TUTUP,
+skenario `normal`) dari tiga relawan sehat (kode OR2, OR3, OR4), masing-masing 100 percobaan
+(5 jari x 20 percobaan, urutan acak), total 300 percobaan. Data mentah ada di
+`hasil_uji/uji_OR*_normal_tutup_jarak.csv`, ringkasannya di `hasil_uji/ringkasan_evaluasi.csv`.
+
+### Uji respons jari
 
 | Metrik | Hasil |
 |---|---|
-| Akurasi keseluruhan | 83% (83 dari 100 percobaan) |
-| Salah jari / terlewat | 13 / 4 |
-| Precision per jari | 0,63 (jempol), 0,89 (telunjuk), 1,00 (tengah, manis, kelingking) |
-| Recall per jari | 0,75 sampai 0,95 |
-| Nada keliru per sesi | 37 |
-| Rata-rata waktu respon | 1,68 detik |
-| Rata-rata FPS | 32,9 |
+| Akurasi keseluruhan | 94,7% (284 dari 300 percobaan) |
+| Akurasi per relawan | OR2 94%, OR3 96%, OR4 94% |
+| Salah jari / terlewat | 12 / 4 |
+| Precision per jari | 0,92 (jempol), 0,93 (telunjuk), 0,97 (tengah), 0,98 (manis), 1,00 (kelingking) |
+| Recall per jari | 0,88 (manis), 0,95 (telunjuk, tengah, kelingking), 1,00 (jempol) |
+| Nada keliru per sesi | 8,67 (OR2 17, OR3 5, OR4 4) |
+| Rata-rata waktu respon | 1,48 detik (termasuk waktu reaksi relawan, bukan latensi sistem murni) |
+| Rata-rata FPS | 19,9 |
+| Persen frame tangan terdeteksi | 100% |
+| Indeks isolasi | 0,957 |
 
-Dari 13 percobaan salah jari, 11 terbaca sebagai jempol. Angka ini hasil satu sesi
-dan akan berubah bila pengujian diulang atau relawan ditambah.
+Dari 12 percobaan salah jari, 5 terbaca sebagai jempol, 4 telunjuk, 2 tengah, dan 1 manis.
+
+### Uji kondisi diam
+
+Satu relawan (OR4), 60 detik, tangan rileks: 0 pemicu palsu (0 per menit), di bawah target
+paling banyak 1 pemicu per menit. Frame tangan terdeteksi 100%.
+
+### Cek deteksi postur
+
+Satu relawan (OR2): tangan terdeteksi 100% pada ketiga postur (genggam, buka sebagian,
+buka lebar). Pemisahan genggam vs terbuka untuk fitur `jarak` berkisar 2,51 sampai 3,12
+(di atas batas sekitar 2), sedangkan untuk fitur `sudut` 2,25 sampai 2,75.
+
+Semua angka berasal dari sampel kecil dan akan berubah bila pengujian diulang atau
+relawan ditambah.
 
 ## Keterbatasan
 
-- Pengujian dengan data tersimpan baru melibatkan satu relawan sehat dan memakai versi
-  awal, sehingga belum dapat digeneralisasi. Hasil ini mengukur kinerja teknis, bukan
-  manfaat rehabilitasi klinis.
-- Skenario tangan kaku (misalnya `kaku_sedang`, `kaku_kecil`, `genggam`) adalah tiruan oleh
-  relawan sehat, bukan pasien pascastroke.
-- Jempol cenderung terbaca saat jari lain digerakkan (precision 0,63 pada versi awal).
-  Penyebabnya masih dugaan dan belum diverifikasi. Metode fitur `sudut` dibuat agar jempol
-  tidak bergantung pada posisi jari lain, tetapi efeknya belum diuji.
-- Uji kondisi diam (tangan rileks tanpa gerakan sengaja) sudah tersedia lewat `uji_diam.py`,
-  tetapi hasilnya belum ada, sehingga pemicu tanpa gerakan belum terukur.
+- Pengujian respons jari melibatkan tiga relawan sehat, sedangkan uji kondisi diam dan cek
+  postur baru satu relawan (satu sesi). Belum ada pengujian pada pasien pascastroke, sehingga
+  hasil belum dapat digeneralisasi. Hasil ini mengukur kinerja teknis, bukan manfaat
+  rehabilitasi klinis.
+- Waktu respon mencakup waktu reaksi relawan terhadap instruksi, sehingga bukan ukuran
+  kecepatan sistem saja. FPS bergantung pada spesifikasi laptop yang dipakai.
+- Skenario tangan kaku (misalnya `kaku_sedang`, `kaku_kecil`, `genggam`) tersedia di skrip uji
+  sebagai tiruan oleh relawan sehat, tetapi belum diuji. Data yang ada hanya skenario `normal`
+  arah TUTUP dengan fitur `jarak`.
+- Jempol memiliki precision terendah (0,92) dan paling sering terbaca saat jari lain
+  digerakkan. Penyebabnya masih dugaan dan belum diverifikasi. Metode fitur `sudut` dibuat agar
+  jempol tidak bergantung pada posisi jari lain, tetapi pada uji respons jari efeknya belum diuji.
 - Estimasi gerakan dari kamera 2D bersifat relatif, bukan sudut sendi sebenarnya. Rentang
   gerak di ringkasan sesi berasal dari kalibrasi, sedangkan usaha maksimum dipantau selama
   sesi tetapi tetap relatif terhadap kalibrasi.
