@@ -266,8 +266,8 @@ relawan ditambah.
 | `main.py` | Aplikasi utama, tampilan, mode melodi, seluruh tangan, ringkasan sesi | Romanna |
 | `mode_uji.py` | Pengumpulan data uji respons jari dari relawan | Lenggo |
 | `evaluasi.py` | Confusion matrix, precision, recall, nada keliru, FPS, per kondisi uji | Lenggo |
-| `uji_deteksi_postur.py` | Cek deteksi postur dan pemisahan fitur | (isi) |
-| `uji_diam.py` | Uji pemicu palsu pada kondisi diam | (isi) |
+| `uji_deteksi_postur.py` | Cek deteksi postur dan pemisahan fitur |Lenggo |
+| `uji_diam.py` | Uji pemicu palsu pada kondisi diam | Lenggo |
 
 ## Dataset
 
