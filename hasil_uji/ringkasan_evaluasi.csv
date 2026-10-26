@@ -1,0 +1,16 @@
+skenario,arah,fitur
+normal,tutup,jarak
+jari,precision,recall,percobaan
+Jempol,0.923,1.0,60
+Telunjuk,0.934,0.95,60
+Tengah,0.966,0.95,60
+Manis,0.981,0.883,60
+Kelingking,1.0,0.95,60
+akurasi_persen,94.7
+nada_keliru_per_sesi,8.67
+waktu_respon_s,1.48
+fps_rata2,19.9
+frame_terdeteksi_persen,100.0
+indeks_isolasi,0.957
+
+diam,OR4,normal,tutup,jarak,0,0.0
