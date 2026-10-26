@@ -1,4 +1,8 @@
-"""Pembuat dan pemutar nada."""
+"""Pembuat dan pemutar nada. Penanggung jawab: Anggota 3.
+
+Perubahan v3: play_chord() untuk tugas "seluruh tangan" (jempol, tengah, kelingking
+berbunyi bersamaan sebagai satu akord C-E-G).
+"""
 
 import numpy as np
 import pygame
@@ -6,6 +10,7 @@ import pygame
 FINGER_NAMES = ["Jempol", "Telunjuk", "Tengah", "Manis", "Kelingking"]
 FINGER_FREQS = [261.63, 293.66, 329.63, 349.23, 392.00]  # C4 D4 E4 F4 G4
 WRONG_FREQ = 150.0  # nada rendah dan kasar sebagai penanda jari keliru
+CHORD_FINGERS = (0, 2, 4)  # C4 E4 G4
 
 
 class TonePlayer:
@@ -42,6 +47,13 @@ class TonePlayer:
         sound = self.sounds[finger_index]
         sound.set_volume(self.volume)
         sound.play()
+
+    def play_chord(self):
+        """Akord C-E-G, dipakai untuk satu ulangan gerakan seluruh tangan."""
+        for i in CHORD_FINGERS:
+            sound = self.sounds[i]
+            sound.set_volume(self.volume * 0.6)  # lebih pelan agar tidak terlalu keras
+            sound.play()
 
     def play_wrong(self):
         self.wrong_sound.set_volume(self.volume)
