@@ -1,17 +1,4 @@
-"""Deteksi tangan dan fitur tekukan jari. Penanggung jawab: Anggota 1.
-
-Dua metode fitur (nilai BESAR = jari lurus/terbuka, KECIL = jari ditekuk):
-- "jarak" (default, sama dengan laporan): jarak ujung jari ke pergelangan dibagi
-  ukuran telapak. Untuk jempol: jarak ujung jempol ke pangkal kelingking.
-- "sudut" (baru): sudut sendi PIP (pangkal-tengah-ujung ruas) dalam derajat; untuk
-  jempol sudut sendi IP. Dihitung dari 3 landmark, jadi jempol tidak lagi bergantung
-  pada posisi jari lain. Tetap estimasi dari kamera 2D, bukan pengukuran klinis.
-
-Perubahan v3:
-- Metode "sudut" dan atribut n_hands serta palm_ratio (untuk peringatan di aplikasi).
-- Mendeteksi sampai 2 tangan; tangan yang dipilih adalah yang pergelangannya paling
-  dekat dengan tangan di frame sebelumnya.
-"""
+"""Deteksi tangan dan fitur tekukan jari."""
 
 import os
 import time

@@ -1,11 +1,4 @@
-"""Analisis temporal: smoothing dan hysteresis. Penanggung jawab: Anggota 2.
-
-Perubahan v2:
-- Pemanggilan update() pertama setelah reset() hanya MENCATAT status awal,
-  tidak memicu nada (tangan yang mulai dalam keadaan menggenggam tidak
-  lagi membunyikan 5 nada sekaligus).
-- Mendukung jari nonaktif (mask `active`) dan ambang yang bisa diubah.
-"""
+"""Analisis temporal: smoothing dan hysteresis."""
 
 from collections import deque
 

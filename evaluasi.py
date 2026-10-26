@@ -1,15 +1,4 @@
-"""Evaluasi sistem dari data uji. Penanggung jawab: Anggota 4.
-
-Membaca semua file hasil_uji/uji_*.csv lalu menghitung, UNTUK TIAP KONDISI UJI
-(skenario, arah, metode fitur): confusion matrix per jari, precision, recall,
-akurasi, nada keliru per sesi, waktu respon, FPS, persen frame tangan terdeteksi, dan
-indeks isolasi. Berkas lama tanpa kolom skenario dianggap skenario "normal", arah
-"tutup", fitur "jarak". Jalankan: python evaluasi.py
-
-Perubahan v3: hasil dipisah per kondisi uji agar tidak tercampur (mis. tangan normal
-vs tangan kaku tiruan), jari yang tidak diuji ditampilkan "n/a" (bukan 0), dan
-berkas uji_diam (diam_*.csv) ikut diringkas.
-"""
+"""Evaluasi sistem dari data uji."""
 
 import csv
 import glob

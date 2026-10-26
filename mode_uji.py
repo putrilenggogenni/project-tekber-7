@@ -1,24 +1,4 @@
-"""Mode uji untuk mengumpulkan data evaluasi. Penanggung jawab: Anggota 4.
-
-Aplikasi meminta relawan menggerakkan jari tertentu (urutan acak). Setiap percobaan
-dicatat ke CSV: jari target, jari yang memicu nada, jumlah pemicu, waktu respon, FPS.
-Tidak ada video yang disimpan.
-
-Jalankan: python mode_uji.py [--skenario normal] [--arah auto|tutup|buka]
-                             [--fitur jarak|sudut] [--kamera 0]
-Tombol: SPASI = mulai kalibrasi, Q = berhenti (data yang sudah terekam tetap tersimpan).
-
-Perubahan v3:
-- Kalibrasi dua fase dan syarat "istirahat" dihitung dari posisi istirahat relawan
-  sendiri (tangan kaku yang tertutup tidak lagi membuat layar macet).
-- Hanya jari yang aktif setelah kalibrasi yang diuji.
-- Label skenario (normal, kaku_sedang, kaku_kecil, genggam, dst.), arah, dan metode
-  fitur dicatat agar tiap kondisi bisa dievaluasi terpisah. Nilai default batas waktu
-  (5 dtk) dan jendela (0,6 dtk) sama dengan laporan agar hasilnya tetap sebanding;
-  ubah dengan --timeout dan --jendela hanya untuk kondisi uji yang berbeda dan
-  laporkan sebagai kondisi terpisah.
-- Reset filter 1 detik saat tangan hilang (sama dengan main.py).
-"""
+"""Mode uji untuk mengumpulkan data evaluasi."""
 
 import argparse
 import csv

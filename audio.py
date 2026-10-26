@@ -1,8 +1,4 @@
-"""Pembuat dan pemutar nada. Penanggung jawab: Anggota 3.
-
-Perubahan v3: play_chord() untuk tugas "seluruh tangan" (jempol, tengah, kelingking
-berbunyi bersamaan sebagai satu akord C-E-G).
-"""
+"""Pembuat dan pemutar nada."""
 
 import numpy as np
 import pygame

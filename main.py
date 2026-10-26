@@ -1,15 +1,4 @@
-"""Aplikasi utama: instrumen musik udara (v3). Penanggung jawab: Anggota 3.
-
-Jalankan: python main.py [--kamera 0] [--fitur jarak|sudut]
-
-Tombol:
-  C = kalibrasi 2 fase (istirahat 4 dtk, lalu gerak 8 dtk)
-  B = arah latihan TUTUP/BUKA (otomatis dipilih setelah kalibrasi)
-  H = tugas seluruh tangan (satu akord per ulangan)
-  M = mode melodi        D = ganti level melodi     T = melodi ketat/toleran
-  A = tandai sesi dibantu/mandiri                   P = jeda
-  [ / ] = sensitivitas   + / - = volume             Q = keluar, simpan, ringkasan
-"""
+"""Aplikasi utama: instrumen musik udara (v3)."""
 
 import argparse
 import csv

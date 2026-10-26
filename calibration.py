@@ -1,15 +1,4 @@
-"""Kalibrasi per pengguna. Penanggung jawab: Anggota 2.
-
-Perubahan v3 (untuk tangan kaku yang cenderung tertutup):
-- Kalibrasi dua fase: (1) POSISI ISTIRAHAT: tangan dibiarkan rileks dan diam,
-  (2) RENTANG GERAK: pengguna menggerakkan jari semampunya.
-- Sinyal usaha dihitung RELATIF terhadap posisi istirahat, ke dua arah:
-  "tutup" (menjauh dari istirahat ke arah menekuk) dan "buka" (ke arah meluruskan).
-- Noise saat istirahat diukur dan dipakai sebagai ZONA MATI: gerakan sekecil noise
-  tidak dihitung sebagai usaha.
-- Validitas per jari dan per arah: jari dengan rentang terlalu kecil (atau tidak
-  jelas lebih besar dari noise) dinonaktifkan, bukan menggagalkan seluruh kalibrasi.
-"""
+"""Kalibrasi per pengguna"""
 
 from dataclasses import dataclass
 

@@ -1,16 +1,5 @@
 """Cek apakah tangan dengan postur tertentu (genggam, setengah terbuka, terbuka)
-terdeteksi MediaPipe, dan metode fitur mana yang memisahkan postur lebih jelas.
-
-Jalankan: python uji_deteksi_postur.py [--detik 8] [--kamera 0]
-Alur: untuk tiap postur, tahan tangan 8 detik tanpa banyak bergerak.
-Keluaran (layar + hasil_uji/postur_<relawan>.csv):
-- persen frame yang tangannya terdeteksi per postur
-- rata-rata dan simpangan tiap jari untuk fitur "jarak" dan "sudut"
-- pemisahan genggam vs terbuka = selisih rata-rata / simpangan gabungan (makin besar
-  makin jelas terpisah; di bawah sekitar 2 berarti tumpang-tindih dengan noise)
-Ini langkah pertama yang perlu dilakukan sebelum memperbaiki yang lain: kalau tangan
-menggenggam sering tidak terdeteksi, perbaikan lain tidak banyak berguna.
-"""
+terdeteksi MediaPipe, dan metode fitur mana yang memisahkan postur lebih jelas."""
 
 import argparse
 import csv

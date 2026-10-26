@@ -1,10 +1,4 @@
-"""Uji kondisi diam: tangan rileks dan tidak digerakkan, hitung pemicu palsu.
-
-Jalankan: python uji_diam.py [--durasi 60] [--skenario normal] [--arah auto|tutup|buka]
-                             [--fitur jarak|sudut] [--kamera 0]
-Hasil: hasil_uji/diam_<relawan>_<skenario>_<arah>_<fitur>.csv
-Target di rencana laporan: pemicu palsu <= 1 per menit.
-"""
+"""Uji kondisi diam: tangan rileks dan tidak digerakkan, hitung pemicu palsu."""
 
 import argparse
 import csv
